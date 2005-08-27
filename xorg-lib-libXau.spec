@@ -1,5 +1,3 @@
-
-#
 Summary:	Xau - Authorization Protocol for X
 Summary(pl):	Xau - protokó³ autoryzacji dla X
 Name:		xorg-lib-libXau
@@ -14,10 +12,10 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
-BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXau
-BuildRoot:	%{tmpdir}/libXau-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -28,12 +26,11 @@ Xau - Authorization Protocol for X.
 %description -l pl
 Xau - protokó³ autoryzacji dla X.
 
-
 %package devel
 Summary:	Header files libXau development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXau
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXau = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
 Obsoletes:	libXau-devel
 
@@ -49,12 +46,11 @@ Xau - protokó³ autoryzacji dla X.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXau.
 
-
 %package static
-Summary:	Static libXau libraries
-Summary(pl):	Biblioteki statyczne libXau
-Group:		Development/Libraries
-Requires:	xorg-lib-libXau-devel = %{version}-%{release}
+Summary:	Static libXau library
+Summary(pl):	Biblioteka statyczna libXau
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXau-static
 
 %description static
@@ -65,12 +61,10 @@ This package contains the static libXau library.
 %description static -l pl
 Xau - protokó³ autoryzacji dla X.
 
-Pakiet zawiera statyczne biblioteki libXau.
-
+Pakiet zawiera statyczn± bibliotekê libXau.
 
 %prep
 %setup -q -n libXau-%{version}
-
 
 %build
 %{__libtoolize}
@@ -94,21 +88,18 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,wheel) %{_libdir}/libXau.so.*
-
+%attr(755,root,root) %{_libdir}/libXau.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/Xauth.h
+%attr(755,root,root) %{_libdir}/libXau.so
 %{_libdir}/libXau.la
-%attr(755,root,wheel) %{_libdir}/libXau.so
+%{_includedir}/X11/Xauth.h
 %{_pkgconfigdir}/xau.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
