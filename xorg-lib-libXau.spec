@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXau.la
 %{_includedir}/X11/Xauth.h
 %{_pkgconfigdir}/xau.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
