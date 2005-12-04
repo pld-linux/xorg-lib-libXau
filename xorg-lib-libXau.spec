@@ -24,8 +24,8 @@ Xau - Authorization Protocol for X.
 Xau - protokó³ autoryzacji dla X.
 
 %package devel
-Summary:	Header files libXau development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXau
+Summary:	Header files for libXau library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXau
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -35,7 +35,7 @@ Obsoletes:	libXau-devel
 Xau - Authorization Protocol for X.
 
 This package contains the header files needed to develop programs that
-use these libXau.
+use libXau.
 
 %description devel -l pl
 Xau - protokó³ autoryzacji dla X.
