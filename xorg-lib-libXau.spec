@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXau-%{version}.tar.bz2
-# Source0-md5:	aac9eef61542eb0c4db67274d8244714
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXau-%{version}.tar.bz2
+# Source0-md5:	8b0f208b55d5c05d63ae75d6f6ed5c0c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
