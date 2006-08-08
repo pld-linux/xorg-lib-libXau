@@ -1,19 +1,19 @@
 Summary:	Xau - Authorization Protocol for X
 Summary(pl):	Xau - protokó³ autoryzacji dla X
 Name:		xorg-lib-libXau
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXau-%{version}.tar.bz2
-# Source0-md5:	8b233b9c645ab34d29da512c9a8f1f6e
+# Source0-md5:	aeea2b8949d5aab2ce53286b8dfc64b9
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-xproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.1.0
 Obsoletes:	libXau
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
