@@ -1,5 +1,5 @@
-Summary:	Xau - Authorization Protocol for X
-Summary(pl):	Xau - protokó³ autoryzacji dla X
+Summary:	Xau - X authorization file management library
+Summary(pl):	Xau - biblioteka zarz±dzaj±ca plikami autoryzacji X
 Name:		xorg-lib-libXau
 Version:	1.0.3
 Release:	1
@@ -18,10 +18,13 @@ Obsoletes:	libXau
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Xau - Authorization Protocol for X.
+Xau is the X authorization file management library, conforming to X
+Authorization Protocol.
+
 
 %description -l pl
-Xau - protokó³ autoryzacji dla X.
+Xau to biblioteka zarz±dzaj±ca plikami autoryzacji X zgodnie z
+protoko³em autoryzacji X.
 
 %package devel
 Summary:	Header files for libXau library
@@ -32,16 +35,10 @@ Requires:	xorg-proto-xproto-devel
 Obsoletes:	libXau-devel
 
 %description devel
-Xau - Authorization Protocol for X.
-
-This package contains the header files needed to develop programs that
-use libXau.
+Header files for libXau library.
 
 %description devel -l pl
-Xau - protokó³ autoryzacji dla X.
-
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXau.
+Pliki nag³ówkowe biblioteki libXau.
 
 %package static
 Summary:	Static libXau library
@@ -51,14 +48,10 @@ Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXau-static
 
 %description static
-Xau - Authorization Protocol for X.
-
-This package contains the static libXau library.
+Static libXau library.
 
 %description static -l pl
-Xau - protokó³ autoryzacji dla X.
-
-Pakiet zawiera statyczn± bibliotekê libXau.
+Biblioteka statyczna libXau.
 
 %prep
 %setup -q -n libXau-%{version}
