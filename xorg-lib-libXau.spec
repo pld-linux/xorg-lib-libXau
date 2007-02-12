@@ -1,5 +1,5 @@
 Summary:	Xau - X authorization file management library
-Summary(pl):	Xau - biblioteka zarz±dzaj±ca plikami autoryzacji X
+Summary(pl.UTF-8):   Xau - biblioteka zarzÄ…dzajÄ…ca plikami autoryzacji X
 Name:		xorg-lib-libXau
 Version:	1.0.3
 Release:	1
@@ -22,13 +22,13 @@ Xau is the X authorization file management library, conforming to X
 Authorization Protocol.
 
 
-%description -l pl
-Xau to biblioteka zarz±dzaj±ca plikami autoryzacji X zgodnie z
-protoko³em autoryzacji X.
+%description -l pl.UTF-8
+Xau to biblioteka zarzÄ…dzajÄ…ca plikami autoryzacji X zgodnie z
+protokoÅ‚em autoryzacji X.
 
 %package devel
 Summary:	Header files for libXau library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXau
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXau
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -37,12 +37,12 @@ Obsoletes:	libXau-devel
 %description devel
 Header files for libXau library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libXau.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libXau.
 
 %package static
 Summary:	Static libXau library
-Summary(pl):	Biblioteka statyczna libXau
+Summary(pl.UTF-8):   Biblioteka statyczna libXau
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXau-static
@@ -50,7 +50,7 @@ Obsoletes:	libXau-static
 %description static
 Static libXau library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna libXau.
 
 %prep
