@@ -2,7 +2,7 @@ Summary:	Xau - X authorization file management library
 Summary(pl.UTF-8):	Xau - biblioteka zarządzająca plikami autoryzacji X
 Name:		xorg-lib-libXau
 Version:	1.0.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXau-%{version}.tar.bz2
