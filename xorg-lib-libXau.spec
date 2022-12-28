@@ -1,21 +1,23 @@
 Summary:	Xau - X authorization file management library
 Summary(pl.UTF-8):	Xau - biblioteka zarządzająca plikami autoryzacji X
 Name:		xorg-lib-libXau
-Version:	1.0.9
+Version:	1.0.11
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXau-%{version}.tar.bz2
-# Source0-md5:	c5f16288f2da9f071b29111d68797480
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXau-%{version}.tar.xz
+# Source0-md5:	7f14ba9c84a81a2b9dd023706febab38
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-Obsoletes:	libXau
+BuildRequires:	xz
+Obsoletes:	libXau < 0.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +34,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXau
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
-Obsoletes:	libXau-devel
+Obsoletes:	libXau-devel < 0.2
 
 %description devel
 Header files for libXau library.
@@ -45,7 +47,7 @@ Summary:	Static libXau library
 Summary(pl.UTF-8):	Biblioteka statyczna libXau
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXau-static
+Obsoletes:	libXau-static < 0.2
 
 %description static
 Static libXau library.
